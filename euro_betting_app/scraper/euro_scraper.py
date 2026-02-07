@@ -93,7 +93,18 @@ def calculate_defense_vs_position(
 
 
 def build_euro_data(raw_json_path: str | Path) -> dict[str, Any]:
-  raw = _read_json(Path(raw_json_path))
+  requested_path = Path(raw_json_path)
+  if requested_path.exists():
+    raw = _read_json(requested_path)
+  else:
+    fallback_path = Path("resources/data.json")
+    if fallback_path.exists():
+      raw = _read_json(fallback_path)
+    else:
+      raise FileNotFoundError(
+        f"Raw input not found: {requested_path}. "
+        f"Also missing fallback: {fallback_path}."
+      )
 
   teams = raw.get("teams", [])
   schedule = raw.get("schedule", [])
