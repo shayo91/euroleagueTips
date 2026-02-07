@@ -166,3 +166,54 @@ Error Handling:
 If the HTTP call fails or the user is offline, show a CupertinoAlertDialog with a 'Retry' button.
 
 Cache the last successful JSON locally using shared_preferences so the app works offline."
+
+
+## Phase 8: The "Betting Line" Input
+Goal: The app knows the stats, but it doesn't know the Odds. You need a way to tell the app: "The bookie line is 14.5 points."
+
+Windsurf Prompt (Phase 8):
+
+"I need to interact with the predictions.
+
+Interactive Line: On the PlayerDetailSheet (the modal), add a CupertinoTextField labeled 'Bookie Line'.
+
+Default it to the player's season average.
+
+When I change this number (e.g., from 12.5 to 14.5), the 'Confidence Score' and 'Direction' (OVER/UNDER) should instantly recalculate.
+
+Dynamic Calculation:
+
+Move the calculateConfidence logic into a ChangeNotifier so the UI updates in real-time.
+
+Visual Feedback: If the user enters a line that is too high (risky), change the 'Track Bet' button color from Blue to Red/Grey.
+
+Save Bet:
+
+When I click 'Track Bet', save this specific prediction (Player + Line + Date) to a local list called MySlip."
+
+
+
+## Phase 9: The "Moneyball" Logic Upgrade
+Goal: The current logic (Season Avg vs. Defense) is too simple. Let's make it smarter.
+
+Windsurf Prompt (Phase 9):
+
+"Let's upgrade the AnalysisEngine logic to be more professional.
+
+Implement these weighted factors for the 'Confidence Score':
+
+Recency Bias: (Last 5 Games Avg) is worth 60%, (Season Avg) is worth 40%.
+
+Home/Away Split: Check if the game is Home or Away.
+
+If Player is at Home, boost their projected points by 5%.
+
+If Away, decrease by 5%.
+
+Blowout Risk:
+
+Compare the two teams' win/loss records.
+
+If one team has >80% wins and the other <20%, reduce the confidence score (risk of star players sitting out the 4th quarter).
+
+Update the generateTips function to use this weighted formula."

@@ -8,7 +8,6 @@ from typing import Any
 
 import pandas as pd
 import requests
-from bs4 import BeautifulSoup
 
 POSITIONS = ("PG", "SG", "SF", "PF", "C")
 
@@ -98,15 +97,24 @@ def build_euro_data(raw_json_path: str | Path) -> dict[str, Any]:
 
   teams = raw.get("teams", [])
   schedule = raw.get("schedule", [])
+  players = raw.get("players", [])
 
   player_game_logs_df = pd.DataFrame(raw.get("player_game_logs", []))
   defense_vs_position = calculate_defense_vs_position(player_game_logs_df)
 
   return {
     "teams": teams,
+    "players": players,
     "defense_vs_position": defense_vs_position,
     "schedule": schedule,
   }
+
+
+def save_to_json(data: dict[str, Any], *, output_path: str | Path) -> Path:
+  path = Path(output_path)
+  path.parent.mkdir(parents=True, exist_ok=True)
+  path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+  return path
 
 
 def save_euro_data(
@@ -118,13 +126,23 @@ def save_euro_data(
   output_path.parent.mkdir(parents=True, exist_ok=True)
 
   data = build_euro_data(raw_json_path)
-  output_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
-  return output_path
+  return save_to_json(data, output_path=output_path)
 
 
 def scrape_basketball_reference_euroleague(*, url: str) -> dict[str, Any]:
   response = requests.get(url, timeout=30)
   response.raise_for_status()
+
+  try:
+    from bs4 import BeautifulSoup  # type: ignore
+  except ImportError:  # pragma: no cover
+    return {
+      "source": url,
+      "title": None,
+      "note": (
+        "BeautifulSoup is not installed. Install with: pip install beautifulsoup4"
+      ),
+    }
 
   soup = BeautifulSoup(response.text, "html.parser")
 
@@ -148,12 +166,15 @@ def main(argv: list[str] | None = None) -> int:
   )
   parser.add_argument(
     "--out",
-    default="scraper/euro_data.json",
-    help="Output path for processed euro_data.json.",
+    default="resources/data.json",
+    help="Output path for processed data.json (relative to repo root).",
   )
 
   args = parser.parse_args(argv)
-  save_euro_data(raw_json_path=args.raw, output_json_path=args.out)
+
+  print("Fetching fresh EuroLeague data...")
+  data = build_euro_data(args.raw)
+  save_to_json(data, output_path=args.out)
   return 0
 
 

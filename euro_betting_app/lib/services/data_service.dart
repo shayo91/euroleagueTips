@@ -66,14 +66,43 @@ class DataService {
 
     final teamsJson = (decoded['teams'] as List<dynamic>?) ?? const [];
     final playersJson = (decoded['players'] as List<dynamic>?) ?? const [];
-    final scheduleJson = (decoded['schedule'] as List<dynamic>?) ?? const [];
+    final scheduleJson = (decoded['schedule'] as List<dynamic>?) ??
+        (decoded['upcomingGames'] as List<dynamic>?) ??
+        const [];
 
-    final defenseJson = decoded['defense_vs_position'];
+    final defenseJson =
+        decoded['defense_vs_position'] ?? decoded['defenseStats'];
 
-    final teams = teamsJson
+    final schedule = scheduleJson
         .whereType<Map<String, dynamic>>()
-        .map(Team.fromJson)
         .toList(growable: false);
+
+    final opponentByTeamId = <String, String>{};
+    for (final game in schedule) {
+      final homeTeamId = game['homeTeamId'] as String?;
+      final awayTeamId = game['awayTeamId'] as String?;
+
+      if (homeTeamId != null && awayTeamId != null) {
+        opponentByTeamId[homeTeamId] ??= awayTeamId;
+        opponentByTeamId[awayTeamId] ??= homeTeamId;
+      }
+    }
+
+    final teams = teamsJson.whereType<Map<String, dynamic>>().map((json) {
+      final teamId = (json['id'] as String?) ?? (json['team_id'] as String?) ?? '';
+      return Team(
+        id: teamId,
+        name: (json['name'] as String?) ?? '',
+        logoUrl: (json['logoUrl'] as String?) ??
+            (json['logo_url'] as String?) ??
+            '',
+        nextOpponentId: opponentByTeamId[teamId] ??
+            (json['nextOpponentId'] as String?) ??
+            (json['next_opponent_id'] as String?) ??
+            '',
+        record: (json['record'] as String?) ?? '',
+      );
+    }).toList(growable: false);
 
     final players = playersJson
         .whereType<Map<String, dynamic>>()
@@ -89,11 +118,13 @@ class DataService {
           defenses.add(DefenseStats.fromDefenseVsPosition(teamId, value));
         }
       }
+    } else if (defenseJson is List<dynamic>) {
+      defenses.addAll(
+        defenseJson
+            .whereType<Map<String, dynamic>>()
+            .map(DefenseStats.fromJson),
+      );
     }
-
-    final schedule = scheduleJson
-        .whereType<Map<String, dynamic>>()
-        .toList(growable: false);
 
     return EuroData(
       teams: teams,

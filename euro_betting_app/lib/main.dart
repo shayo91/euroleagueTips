@@ -5,6 +5,7 @@ import 'screens/analysis_screen.dart';
 import 'screens/matches_screen.dart';
 import 'screens/settings_screen.dart';
 import 'services/data_service.dart';
+import 'services/my_slip_controller.dart';
 import 'services/tips_controller.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const dataUrl =
-        'https://raw.githubusercontent.com/shayo91/euroleagueTips/main/euro_betting_app/data.json';
+        'https://raw.githubusercontent.com/shayo91/euroleagueTips/main/euro_betting_app/resources/data.json';
 
     return MultiProvider(
       providers: [
@@ -26,6 +27,9 @@ class MyApp extends StatelessWidget {
           create: (_) => DataService(
             dataUrl: dataUrl,
           ),
+        ),
+        ChangeNotifierProvider<MySlipController>(
+          create: (_) => MySlipController(),
         ),
         ChangeNotifierProvider<TipsController>(
           create: (context) => TipsController(

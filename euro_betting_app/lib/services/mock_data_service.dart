@@ -11,6 +11,7 @@ class MockDataService {
     name: 'Real Madrid',
     logoUrl: 'https://example.com/logos/real_madrid.png',
     nextOpponentId: 'asm',
+    record: '22-3',
   );
 
   static const monaco = Team(
@@ -18,6 +19,7 @@ class MockDataService {
     name: 'Monaco',
     logoUrl: 'https://example.com/logos/monaco.png',
     nextOpponentId: 'rm',
+    record: '15-10',
   );
 
   static const panathinaikos = Team(
@@ -25,6 +27,7 @@ class MockDataService {
     name: 'Panathinaikos',
     logoUrl: 'https://example.com/logos/panathinaikos.png',
     nextOpponentId: 'alb',
+    record: '16-9',
   );
 
   static const albaBerlin = Team(
@@ -32,6 +35,7 @@ class MockDataService {
     name: 'Alba Berlin',
     logoUrl: 'https://example.com/logos/alba_berlin.png',
     nextOpponentId: 'pao',
+    record: '5-20',
   );
 
   List<Team> getTeams() => const [

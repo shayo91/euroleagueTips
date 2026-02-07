@@ -2,6 +2,23 @@
 
 A new Flutter project.
 
+## GitHub Actions: Daily data.json updates
+
+This repository includes a scheduled workflow that runs the Python scraper daily
+and commits the updated `euro_betting_app/resources/data.json` back to the repo.
+
+To allow the workflow to push commits:
+
+1. In your GitHub repo, go to:
+   Settings
+   Actions
+   General
+2. Scroll to:
+   Workflow permissions
+3. Select:
+   Read and write permissions
+4. Save.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

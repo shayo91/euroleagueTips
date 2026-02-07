@@ -8,11 +8,13 @@ import '../models/team.dart';
 
 class AnalysisEngine {
   static const _thresholdMultiplier = 1.15;
+  static const _homeAwayMultiplier = 0.05;
 
   static List<BettingTip> generateTips(
     List<Player> players,
     List<Team> teams,
     List<DefenseStats> defenses,
+    List<Map<String, dynamic>> schedule,
   ) {
     final teamsById = {for (final t in teams) t.id: t};
     final defensesByTeamId = {for (final d in defenses) d.teamId: d};
@@ -25,7 +27,13 @@ class AnalysisEngine {
         continue;
       }
 
-      final opponent = teamsById[team.nextOpponentId];
+      final opponentId = _findOpponentId(
+            teamId: team.id,
+            schedule: schedule,
+          ) ??
+          team.nextOpponentId;
+
+      final opponent = teamsById[opponentId];
       if (opponent == null) {
         continue;
       }
@@ -41,20 +49,41 @@ class AnalysisEngine {
         player.position,
       );
 
+      final recencyWeighted = (player.last5AvgPts * 0.6) + (player.seasonAvgPts * 0.4);
+
+      final isHome = _isHomeGame(
+        teamId: team.id,
+        opponentId: opponent.id,
+        schedule: schedule,
+      );
+
+      final homeAwayAdjusted = recencyWeighted *
+          switch (isHome) {
+            true => 1 + _homeAwayMultiplier,
+            false => 1 - _homeAwayMultiplier,
+            null => 1,
+          };
+
+      final defenseMultiplier = (allowedPts / leagueAverage).clamp(0.85, 1.25);
+      final projectedPoints = homeAwayAdjusted * defenseMultiplier;
+
       final isGreenLight = allowedPts > leagueAverage * _thresholdMultiplier;
       if (!isGreenLight) {
         continue;
       }
 
-      final pctAboveAverage = (allowedPts / leagueAverage) - 1.0;
-      final confidenceScore =
-          min(1.0, max(0.0, pctAboveAverage / 0.50));
+      final defensiveHole = (allowedPts / leagueAverage) - 1.0;
+      var confidenceScore =
+          min(1.0, max(0.0, defensiveHole / 0.50));
+
+      final blowoutPenalty = _blowoutPenalty(team: team, opponent: opponent);
+      confidenceScore = (confidenceScore * blowoutPenalty).clamp(0.0, 1.0);
 
       tips.add(
         BettingTip(
           playerId: player.id,
           matchupDescription: '${player.name} vs ${opponent.name}',
-          suggestedLine: player.last5AvgPts,
+          suggestedLine: projectedPoints,
           direction: TipDirection.over,
           confidenceScore: confidenceScore,
           reasoning:
@@ -67,6 +96,67 @@ class AnalysisEngine {
 
     tips.sort((a, b) => b.confidenceScore.compareTo(a.confidenceScore));
     return tips;
+  }
+
+  static String? _findOpponentId({
+    required String teamId,
+    required List<Map<String, dynamic>> schedule,
+  }) {
+    for (final game in schedule) {
+      final homeTeamId = game['homeTeamId'] as String?;
+      final awayTeamId = game['awayTeamId'] as String?;
+      if (homeTeamId == null || awayTeamId == null) {
+        continue;
+      }
+      if (homeTeamId == teamId) {
+        return awayTeamId;
+      }
+      if (awayTeamId == teamId) {
+        return homeTeamId;
+      }
+    }
+    return null;
+  }
+
+  static bool? _isHomeGame({
+    required String teamId,
+    required String opponentId,
+    required List<Map<String, dynamic>> schedule,
+  }) {
+    for (final game in schedule) {
+      final homeTeamId = game['homeTeamId'] as String?;
+      final awayTeamId = game['awayTeamId'] as String?;
+      if (homeTeamId == null || awayTeamId == null) {
+        continue;
+      }
+
+      final isMatch = (homeTeamId == teamId && awayTeamId == opponentId) ||
+          (homeTeamId == opponentId && awayTeamId == teamId);
+      if (!isMatch) {
+        continue;
+      }
+
+      return homeTeamId == teamId;
+    }
+
+    return null;
+  }
+
+  static double _blowoutPenalty({
+    required Team team,
+    required Team opponent,
+  }) {
+    final teamWinPct = team.winPercentage;
+    final opponentWinPct = opponent.winPercentage;
+    if (teamWinPct == null || opponentWinPct == null) {
+      return 1.0;
+    }
+
+    final isBigMismatch =
+        (teamWinPct > 0.8 && opponentWinPct < 0.2) ||
+            (opponentWinPct > 0.8 && teamWinPct < 0.2);
+
+    return isBigMismatch ? 0.7 : 1.0;
   }
 
   static double _leagueAveragePtsForPosition(PlayerPosition position) =>
