@@ -1,0 +1,64 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+.pub/
+.pub-cache/
+build/
+
+# Flutter platform build artifacts
+**/android/.gradle/
+**/android/local.properties
+**/android/key.properties
+**/android/app/debug
+**/android/app/profile
+**/android/app/release
+
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/App.framework
+**/ios/Flutter/engine/
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Flutter/flutter_export_environment*.sh
+**/ios/Runner.xcworkspace/
+**/ios/Runner.xcworkspace/**
+**/ios/DerivedData/
+**/macos/Pods/
+**/macos/Flutter/ephemeral/
+
+# Generated files
+**/*.g.dart
+**/*.freezed.dart
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Secrets / env
+.env
+.env.*
+
+# Python (scraper)
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.venv/
+
+# Temporary output files
+**/scraper/euro_data.json
+**/scraper/raw_input.json
+
+# Flutter tooling
+.fvm/
