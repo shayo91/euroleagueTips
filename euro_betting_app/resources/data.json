@@ -72,56 +72,6 @@
       "last5AvgPts": 15.0
     }
   ],
-  "defenseStats": [
-    {
-      "teamId": "ALB",
-      "teamName": "Alba Berlin",
-      "allowedPtsPG": 24.5, 
-      "allowedPtsSG": 18.2,
-      "allowedPtsSF": 15.5,
-      "allowedPtsPF": 16.0,
-      "allowedPtsC": 14.0
-    },
-    {
-      "teamId": "RMB",
-      "teamName": "Real Madrid",
-      "allowedPtsPG": 12.5,
-      "allowedPtsSG": 11.0,
-      "allowedPtsSF": 10.5,
-      "allowedPtsPF": 11.2,
-      "allowedPtsC": 9.8
-    },
-    {
-      "teamId": "PAO",
-      "teamName": "Panathinaikos",
-      "allowedPtsPG": 14.2,
-      "allowedPtsSG": 13.5,
-      "allowedPtsSF": 12.0,
-      "allowedPtsPF": 14.5,
-      "allowedPtsC": 11.0
-    },
-    {
-      "teamId": "MON",
-      "teamName": "AS Monaco",
-      "allowedPtsPG": 15.5,
-      "allowedPtsSG": 14.0,
-      "allowedPtsSF": 13.5,
-      "allowedPtsPF": 15.0,
-      "allowedPtsC": 13.2
-    }
-  ],
-  "upcomingGames": [
-    {
-      "id": "g1",
-      "homeTeamId": "MON",
-      "awayTeamId": "ALB",
-      "date": "2024-02-15T19:00:00Z"
-    },
-    {
-      "id": "g2",
-      "homeTeamId": "RMB",
-      "awayTeamId": "PAO",
-      "date": "2024-02-15T20:45:00Z"
-    }
-  ]
+  "defense_vs_position": {},
+  "schedule": []
 }
