@@ -6,7 +6,7 @@ import '../models/enums.dart';
 import '../models/player.dart';
 import '../models/team.dart';
 import 'analysis_engine.dart';
-import 'mock_data_service.dart';
+import 'data_service.dart';
 
 class TipItem {
   const TipItem({
@@ -26,10 +26,10 @@ class TipItem {
 
 class TipsController extends ChangeNotifier {
   TipsController({
-    required MockDataService mockDataService,
-  }) : _mockDataService = mockDataService;
+    required DataService dataService,
+  }) : _dataService = dataService;
 
-  final MockDataService _mockDataService;
+  final DataService _dataService;
 
   bool _isLoading = false;
   Object? _error;
@@ -45,9 +45,10 @@ class TipsController extends ChangeNotifier {
     notifyListeners();
 
     try {
-      final teams = _mockDataService.getTeams();
-      final players = _mockDataService.getPlayers();
-      final defenses = _mockDataService.getDefenseStats();
+      final data = await _dataService.fetchData();
+      final teams = data.teams;
+      final players = data.players;
+      final defenses = data.defenses;
 
       final tips = AnalysisEngine.generateTips(players, teams, defenses);
       final teamsById = {for (final t in teams) t.id: t};

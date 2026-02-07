@@ -1,0 +1,127 @@
+{
+  "teams": [
+    {
+      "id": "RMB",
+      "name": "Real Madrid",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/Real_Madrid_Baloncesto_logo.svg/1200px-Real_Madrid_Baloncesto_logo.svg.png",
+      "record": "22-3"
+    },
+    {
+      "id": "PAO",
+      "name": "Panathinaikos",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Panathinaikos_BC_logo.svg/1200px-Panathinaikos_BC_logo.svg.png",
+      "record": "16-9"
+    },
+    {
+      "id": "MON",
+      "name": "AS Monaco",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3d/AS_Monaco_Basket_Logo.svg/1200px-AS_Monaco_Basket_Logo.svg.png",
+      "record": "15-10"
+    },
+    {
+      "id": "ALB",
+      "name": "Alba Berlin",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/ALBA_Berlin_logo.svg/1200px-ALBA_Berlin_logo.svg.png",
+      "record": "5-20"
+    }
+  ],
+  "players": [
+    {
+      "id": "p1",
+      "name": "Mike James",
+      "teamId": "MON",
+      "position": "PG",
+      "imageUrl": "https://media-cdn.incrowdsports.com/ade34526-7788-466d-b892-94770425330a.png",
+      "seasonAvgPts": 19.4,
+      "last5AvgPts": 22.5
+    },
+    {
+      "id": "p2",
+      "name": "Kendrick Nunn",
+      "teamId": "PAO",
+      "position": "SG",
+      "imageUrl": "https://media-cdn.incrowdsports.com/0f6b4546-6330-47b2-850d-6e865366550d.png",
+      "seasonAvgPts": 14.8,
+      "last5AvgPts": 17.2
+    },
+    {
+      "id": "p3",
+      "name": "Edy Tavares",
+      "teamId": "RMB",
+      "position": "C",
+      "imageUrl": "https://media-cdn.incrowdsports.com/97e6863d-4c31-4822-b533-31422793310d.png",
+      "seasonAvgPts": 10.2,
+      "last5AvgPts": 8.5
+    },
+    {
+      "id": "p4",
+      "name": "Johannes Thiemann",
+      "teamId": "ALB",
+      "position": "PF",
+      "imageUrl": "https://media-cdn.incrowdsports.com/c145893d-822d-4112-9855-32212266601d.png",
+      "seasonAvgPts": 12.7,
+      "last5AvgPts": 13.4
+    },
+    {
+      "id": "p5",
+      "name": "Mathias Lessort",
+      "teamId": "PAO",
+      "position": "C",
+      "imageUrl": "https://media-cdn.incrowdsports.com/c412589d-4221-4112-9214-31112266505d.png",
+      "seasonAvgPts": 13.9,
+      "last5AvgPts": 15.0
+    }
+  ],
+  "defenseStats": [
+    {
+      "teamId": "ALB",
+      "teamName": "Alba Berlin",
+      "allowedPtsPG": 24.5, 
+      "allowedPtsSG": 18.2,
+      "allowedPtsSF": 15.5,
+      "allowedPtsPF": 16.0,
+      "allowedPtsC": 14.0
+    },
+    {
+      "teamId": "RMB",
+      "teamName": "Real Madrid",
+      "allowedPtsPG": 12.5,
+      "allowedPtsSG": 11.0,
+      "allowedPtsSF": 10.5,
+      "allowedPtsPF": 11.2,
+      "allowedPtsC": 9.8
+    },
+    {
+      "teamId": "PAO",
+      "teamName": "Panathinaikos",
+      "allowedPtsPG": 14.2,
+      "allowedPtsSG": 13.5,
+      "allowedPtsSF": 12.0,
+      "allowedPtsPF": 14.5,
+      "allowedPtsC": 11.0
+    },
+    {
+      "teamId": "MON",
+      "teamName": "AS Monaco",
+      "allowedPtsPG": 15.5,
+      "allowedPtsSG": 14.0,
+      "allowedPtsSF": 13.5,
+      "allowedPtsPF": 15.0,
+      "allowedPtsC": 13.2
+    }
+  ],
+  "upcomingGames": [
+    {
+      "id": "g1",
+      "homeTeamId": "MON",
+      "awayTeamId": "ALB",
+      "date": "2024-02-15T19:00:00Z"
+    },
+    {
+      "id": "g2",
+      "homeTeamId": "RMB",
+      "awayTeamId": "PAO",
+      "date": "2024-02-15T20:45:00Z"
+    }
+  ]
+}

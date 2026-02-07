@@ -129,3 +129,40 @@ defense_vs_position: A calculated matrix showing how many points each team allow
 schedule: Next round of games.
 
 Self-Correction: If you can, use BeautifulSoup to sketch out how I would scrape basketball-reference.com/euroleague/ as a fallback source."
+
+
+
+## Phase 7: The "Serverless" Backend
+Goal: Connect your Python data to your Flutter app without paying for a server. Strategy: We will use your GitHub Repository as the database.
+
+Python Script: Runs locally (or via GitHub Actions), scrapes data, and saves data.json.
+
+GitHub: Hosts the data.json file.
+
+Flutter App: Fetches the Raw URL of that JSON file.
+
+Windsurf Prompt (Phase 7):
+
+"I need to connect the Flutter app to real data.
+
+Update Service: Modify lib/services/data_service.dart.
+
+Remove the Mock Data generation.
+
+Add a method fetchData() that uses http.get to fetch a JSON file from a URL.
+
+For now, use this placeholder URL: https://raw.githubusercontent.com/[YOUR_USERNAME]/[REPO_NAME]/main/data.json (I will update this later).
+
+JSON Parsing:
+
+Update the Team, Player, and DefenseStats models.
+
+Ensure their fromJson factories match the structure output by our Python script.
+
+Handle null safety (e.g., if a player has no image, use a local placeholder asset).
+
+Error Handling:
+
+If the HTTP call fails or the user is offline, show a CupertinoAlertDialog with a 'Retry' button.
+
+Cache the last successful JSON locally using shared_preferences so the app works offline."

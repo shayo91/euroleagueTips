@@ -12,9 +12,13 @@ class Team {
   final String nextOpponentId;
 
   factory Team.fromJson(Map<String, dynamic> json) => Team(
-        id: (json['id'] as String?) ?? '',
+        id: (json['id'] as String?) ?? (json['team_id'] as String?) ?? '',
         name: (json['name'] as String?) ?? '',
-        logoUrl: (json['logoUrl'] as String?) ?? '',
-        nextOpponentId: (json['nextOpponentId'] as String?) ?? '',
+        logoUrl: (json['logoUrl'] as String?) ??
+            (json['logo_url'] as String?) ??
+            '',
+        nextOpponentId: (json['nextOpponentId'] as String?) ??
+            (json['next_opponent_id'] as String?) ??
+            '',
       );
 }

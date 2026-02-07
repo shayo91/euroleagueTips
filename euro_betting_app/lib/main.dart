@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'screens/analysis_screen.dart';
 import 'screens/matches_screen.dart';
 import 'screens/settings_screen.dart';
-import 'services/mock_data_service.dart';
+import 'services/data_service.dart';
 import 'services/tips_controller.dart';
 
 void main() {
@@ -17,14 +17,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    const dataUrl =
+        'https://raw.githubusercontent.com/shayo91/euroleagueTips/main/euro_betting_app/data.json';
+
     return MultiProvider(
       providers: [
-        Provider<MockDataService>(
-          create: (_) => const MockDataService(),
+        Provider<DataService>(
+          create: (_) => DataService(
+            dataUrl: dataUrl,
+          ),
         ),
         ChangeNotifierProvider<TipsController>(
           create: (context) => TipsController(
-            mockDataService: context.read<MockDataService>(),
+            dataService: context.read<DataService>(),
           )..load(),
         ),
       ],

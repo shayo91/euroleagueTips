@@ -6,12 +6,53 @@ import '../services/tips_controller.dart';
 import '../widgets/player_detail_sheet.dart';
 import '../widgets/tip_card.dart';
 
-class MatchesScreen extends StatelessWidget {
+class MatchesScreen extends StatefulWidget {
   const MatchesScreen({super.key});
+
+  @override
+  State<MatchesScreen> createState() => _MatchesScreenState();
+}
+
+class _MatchesScreenState extends State<MatchesScreen> {
+  Object? _lastShownError;
 
   @override
   Widget build(BuildContext context) {
     final controller = context.watch<TipsController>();
+
+    if (!controller.isLoading &&
+        controller.error != null &&
+        controller.error != _lastShownError) {
+      _lastShownError = controller.error;
+
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted) {
+          return;
+        }
+
+        showCupertinoDialog<void>(
+          context: context,
+          builder: (context) => CupertinoAlertDialog(
+            title: const Text('Network Error'),
+            content: Text(controller.error.toString()),
+            actions: [
+              CupertinoDialogAction(
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Text('Close'),
+              ),
+              CupertinoDialogAction(
+                isDefaultAction: true,
+                onPressed: () async {
+                  Navigator.of(context).pop();
+                  await context.read<TipsController>().load();
+                },
+                child: const Text('Retry'),
+              ),
+            ],
+          ),
+        );
+      });
+    }
 
     return CupertinoPageScaffold(
       child: CustomScrollView(
