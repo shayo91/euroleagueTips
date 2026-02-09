@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import '../services/tips_controller.dart';
 import '../widgets/player_detail_sheet.dart';
 import '../widgets/tip_card.dart';
+import '../widgets/tip_card_skeleton.dart';
 
 class MatchesScreen extends StatefulWidget {
   const MatchesScreen({super.key});
@@ -64,10 +65,16 @@ class _MatchesScreenState extends State<MatchesScreen> {
             onRefresh: () => context.read<TipsController>().load(),
           ),
           if (controller.isLoading)
-            const SliverFillRemaining(
-              hasScrollBody: false,
-              child: Center(
-                child: CupertinoActivityIndicator(),
+            SliverPadding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+              sliver: SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, index) => const Padding(
+                    padding: EdgeInsets.only(bottom: 12),
+                    child: TipCardSkeleton(),
+                  ),
+                  childCount: 5,
+                ),
               ),
             )
           else if (controller.error != null)

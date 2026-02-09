@@ -1,5 +1,7 @@
+import 'package:euro_betting_app/services/notification_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
+import 'package:workmanager/workmanager.dart';
 
 import 'screens/analysis_screen.dart';
 import 'screens/matches_screen.dart';
@@ -8,7 +10,11 @@ import 'services/data_service.dart';
 import 'services/my_slip_controller.dart';
 import 'services/tips_controller.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await NotificationService.initialize();
+  await Workmanager().initialize(callbackDispatcher);
+  await NotificationService.registerDailyTask();
   runApp(const MyApp());
 }
 

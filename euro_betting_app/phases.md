@@ -217,3 +217,56 @@ Compare the two teams' win/loss records.
 If one team has >80% wins and the other <20%, reduce the confidence score (risk of star players sitting out the 4th quarter).
 
 Update the generateTips function to use this weighted formula."
+
+## Phase 11: Local Notifications (User Retention)
+Goal: When the app finds a "5-Star Mismatch" (e.g., >85% confidence), send a notification to the user's phone, even if the app is closed.
+
+
+
+"I want to alert users about high-value bets.
+
+Dependencies: Add flutter_local_notifications and workmanager (for background tasks).
+
+Background Service:
+
+Create lib/services/notification_service.dart.
+
+Configure Workmanager to fetch the data.json once a day in the background.
+
+Run the AnalysisEngine.
+
+Trigger:
+
+If the engine finds a tip with confidenceScore > 0.85, trigger a local notification:
+
+Title: '🚨 Mismatch Alert'
+
+Body: 'Mike James vs Alba Berlin is a GREEN LIGHT. Tap to see why.'
+
+Permissions: Add the necessary permission keys to Info.plist (iOS) and AndroidManifest.xml (Android)."
+
+
+## Phase 12: Visual Polish & Branding
+Goal: Replace the default Flutter icon and splash screen so it looks like a legitimate App Store product.
+
+Windsurf Prompt (Phase 12):
+
+"Let's polish the app for release.
+
+App Icon:
+
+I need you to generate a configuration for flutter_launcher_icons.
+
+Assume I have an icon file at assets/icon/app_icon.png (I will add this manually).
+
+Configure it to generate icons for both iOS and Android.
+
+Splash Screen:
+
+Use flutter_native_splash.
+
+Configure it to show a solid black background (#000000) with my logo centered.
+
+Loading State:
+
+Improve the MatchesScreen loading state. Instead of a simple spinner, create a 'Skeleton Loader' (Shimmer effect) that mimics the shape of the TipCard so the UI doesn't jump when data loads."## 
