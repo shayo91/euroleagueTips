@@ -3219,6 +3219,1288 @@
       "last5AvgPts": 12.2
     }
   ],
-  "defense_vs_position": {},
-  "schedule": []
+  "defense_vs_position": {
+    "IST": {
+      "PG": 9.9,
+      "SG": 3.0,
+      "SF": 6.4,
+      "PF": 3.0,
+      "C": 8.3
+    },
+    "MCO": {
+      "PG": 5.2,
+      "SG": 3.0,
+      "SF": 6.3,
+      "PF": 3.0,
+      "C": 3.0
+    },
+    "RED": {
+      "PG": 6.5,
+      "SG": 3.0,
+      "SF": 7.6,
+      "PF": 3.0,
+      "C": 5.9
+    },
+    "DUB": {
+      "PG": 8.2,
+      "SG": 3.0,
+      "SF": 3.6,
+      "PF": 3.0,
+      "C": 6.5
+    },
+    "MIL": {
+      "PG": 9.6,
+      "SG": 3.0,
+      "SF": 5.5,
+      "PF": 3.0,
+      "C": 7.7
+    },
+    "BAR": {
+      "PG": 5.2,
+      "SG": 3.0,
+      "SF": 6.3,
+      "PF": 3.0,
+      "C": 3.4
+    },
+    "MUN": {
+      "PG": 6.7,
+      "SG": 3.0,
+      "SF": 8.8,
+      "PF": 3.0,
+      "C": 5.7
+    },
+    "ULK": {
+      "PG": 8.3,
+      "SG": 3.0,
+      "SF": 4.0,
+      "PF": 3.0,
+      "C": 6.4
+    },
+    "HTA": {
+      "PG": 9.0,
+      "SG": 3.0,
+      "SF": 5.5,
+      "PF": 3.0,
+      "C": 8.3
+    },
+    "BAS": {
+      "PG": 4.5,
+      "SG": 3.0,
+      "SF": 6.8,
+      "PF": 3.0,
+      "C": 3.2
+    },
+    "ASV": {
+      "PG": 6.3,
+      "SG": 3.0,
+      "SF": 8.7,
+      "PF": 3.0,
+      "C": 5.6
+    },
+    "TEL": {
+      "PG": 7.7,
+      "SG": 3.0,
+      "SF": 3.8,
+      "PF": 3.0,
+      "C": 6.2
+    },
+    "OLY": {
+      "PG": 9.6,
+      "SG": 3.0,
+      "SF": 6.3,
+      "PF": 3.0,
+      "C": 7.8
+    },
+    "PAN": {
+      "PG": 4.5,
+      "SG": 3.0,
+      "SF": 6.5,
+      "PF": 3.0,
+      "C": 3.0
+    },
+    "PRS": {
+      "PG": 7.0,
+      "SG": 3.0,
+      "SF": 8.4,
+      "PF": 3.0,
+      "C": 5.7
+    },
+    "PAR": {
+      "PG": 8.1,
+      "SG": 3.0,
+      "SF": 4.4,
+      "PF": 3.0,
+      "C": 6.0
+    },
+    "MAD": {
+      "PG": 8.9,
+      "SG": 3.0,
+      "SF": 5.5,
+      "PF": 3.0,
+      "C": 8.2
+    },
+    "PAM": {
+      "PG": 4.4,
+      "SG": 3.0,
+      "SF": 6.7,
+      "PF": 3.0,
+      "C": 3.4
+    },
+    "VIR": {
+      "PG": 6.4,
+      "SG": 3.0,
+      "SF": 8.5,
+      "PF": 3.0,
+      "C": 5.2
+    },
+    "ZAL": {
+      "PG": 7.8,
+      "SG": 3.0,
+      "SF": 3.2,
+      "PF": 3.0,
+      "C": 6.0
+    }
+  },
+  "schedule": [
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "MCO",
+      "gameDate": "2026-02-10T12:23:17.423666",
+      "gameId": "IST_vs_MCO_0"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "RED",
+      "gameDate": "2026-02-11T12:23:17.423666",
+      "gameId": "IST_vs_RED_1"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "DUB",
+      "gameDate": "2026-02-12T12:23:17.423666",
+      "gameId": "IST_vs_DUB_2"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "MIL",
+      "gameDate": "2026-02-13T12:23:17.423666",
+      "gameId": "IST_vs_MIL_3"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "BAR",
+      "gameDate": "2026-02-14T12:23:17.423666",
+      "gameId": "IST_vs_BAR_4"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "MUN",
+      "gameDate": "2026-02-15T12:23:17.423666",
+      "gameId": "IST_vs_MUN_5"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "ULK",
+      "gameDate": "2026-02-16T12:23:17.423666",
+      "gameId": "IST_vs_ULK_6"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "HTA",
+      "gameDate": "2026-02-17T12:23:17.423666",
+      "gameId": "IST_vs_HTA_7"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "BAS",
+      "gameDate": "2026-02-18T12:23:17.423666",
+      "gameId": "IST_vs_BAS_8"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "ASV",
+      "gameDate": "2026-02-19T12:23:17.423666",
+      "gameId": "IST_vs_ASV_9"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "TEL",
+      "gameDate": "2026-02-20T12:23:17.423666",
+      "gameId": "IST_vs_TEL_10"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "OLY",
+      "gameDate": "2026-02-21T12:23:17.423666",
+      "gameId": "IST_vs_OLY_11"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "PAN",
+      "gameDate": "2026-02-22T12:23:17.423666",
+      "gameId": "IST_vs_PAN_12"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-02-23T12:23:17.423666",
+      "gameId": "IST_vs_PRS_13"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-02-24T12:23:17.423666",
+      "gameId": "IST_vs_PAR_14"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-02-25T12:23:17.423666",
+      "gameId": "IST_vs_MAD_15"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-02-26T12:23:17.423666",
+      "gameId": "IST_vs_PAM_16"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-02-27T12:23:17.423666",
+      "gameId": "IST_vs_VIR_17"
+    },
+    {
+      "homeTeamId": "IST",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-02-28T12:23:17.423666",
+      "gameId": "IST_vs_ZAL_18"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "RED",
+      "gameDate": "2026-03-01T12:23:17.423666",
+      "gameId": "MCO_vs_RED_19"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "DUB",
+      "gameDate": "2026-03-02T12:23:17.423666",
+      "gameId": "MCO_vs_DUB_20"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "MIL",
+      "gameDate": "2026-03-03T12:23:17.423666",
+      "gameId": "MCO_vs_MIL_21"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "BAR",
+      "gameDate": "2026-03-04T12:23:17.423666",
+      "gameId": "MCO_vs_BAR_22"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "MUN",
+      "gameDate": "2026-03-05T12:23:17.423666",
+      "gameId": "MCO_vs_MUN_23"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "ULK",
+      "gameDate": "2026-03-06T12:23:17.423666",
+      "gameId": "MCO_vs_ULK_24"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "HTA",
+      "gameDate": "2026-03-07T12:23:17.423666",
+      "gameId": "MCO_vs_HTA_25"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "BAS",
+      "gameDate": "2026-03-08T12:23:17.423666",
+      "gameId": "MCO_vs_BAS_26"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "ASV",
+      "gameDate": "2026-03-09T12:23:17.423666",
+      "gameId": "MCO_vs_ASV_27"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "TEL",
+      "gameDate": "2026-03-10T12:23:17.423666",
+      "gameId": "MCO_vs_TEL_28"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "OLY",
+      "gameDate": "2026-03-11T12:23:17.423666",
+      "gameId": "MCO_vs_OLY_29"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "PAN",
+      "gameDate": "2026-02-10T12:23:17.423666",
+      "gameId": "MCO_vs_PAN_30"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-02-11T12:23:17.423666",
+      "gameId": "MCO_vs_PRS_31"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-02-12T12:23:17.423666",
+      "gameId": "MCO_vs_PAR_32"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-02-13T12:23:17.423666",
+      "gameId": "MCO_vs_MAD_33"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-02-14T12:23:17.423666",
+      "gameId": "MCO_vs_PAM_34"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-02-15T12:23:17.423666",
+      "gameId": "MCO_vs_VIR_35"
+    },
+    {
+      "homeTeamId": "MCO",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-02-16T12:23:17.423666",
+      "gameId": "MCO_vs_ZAL_36"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "DUB",
+      "gameDate": "2026-02-17T12:23:17.423666",
+      "gameId": "RED_vs_DUB_37"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "MIL",
+      "gameDate": "2026-02-18T12:23:17.423666",
+      "gameId": "RED_vs_MIL_38"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "BAR",
+      "gameDate": "2026-02-19T12:23:17.423666",
+      "gameId": "RED_vs_BAR_39"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "MUN",
+      "gameDate": "2026-02-20T12:23:17.423666",
+      "gameId": "RED_vs_MUN_40"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "ULK",
+      "gameDate": "2026-02-21T12:23:17.423666",
+      "gameId": "RED_vs_ULK_41"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "HTA",
+      "gameDate": "2026-02-22T12:23:17.423666",
+      "gameId": "RED_vs_HTA_42"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "BAS",
+      "gameDate": "2026-02-23T12:23:17.423666",
+      "gameId": "RED_vs_BAS_43"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "ASV",
+      "gameDate": "2026-02-24T12:23:17.423666",
+      "gameId": "RED_vs_ASV_44"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "TEL",
+      "gameDate": "2026-02-25T12:23:17.423666",
+      "gameId": "RED_vs_TEL_45"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "OLY",
+      "gameDate": "2026-02-26T12:23:17.423666",
+      "gameId": "RED_vs_OLY_46"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "PAN",
+      "gameDate": "2026-02-27T12:23:17.423666",
+      "gameId": "RED_vs_PAN_47"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-02-28T12:23:17.423666",
+      "gameId": "RED_vs_PRS_48"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-03-01T12:23:17.423666",
+      "gameId": "RED_vs_PAR_49"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-03-02T12:23:17.423666",
+      "gameId": "RED_vs_MAD_50"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-03-03T12:23:17.423666",
+      "gameId": "RED_vs_PAM_51"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-03-04T12:23:17.423666",
+      "gameId": "RED_vs_VIR_52"
+    },
+    {
+      "homeTeamId": "RED",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-03-05T12:23:17.423666",
+      "gameId": "RED_vs_ZAL_53"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "MIL",
+      "gameDate": "2026-03-06T12:23:17.423666",
+      "gameId": "DUB_vs_MIL_54"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "BAR",
+      "gameDate": "2026-03-07T12:23:17.423666",
+      "gameId": "DUB_vs_BAR_55"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "MUN",
+      "gameDate": "2026-03-08T12:23:17.423666",
+      "gameId": "DUB_vs_MUN_56"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "ULK",
+      "gameDate": "2026-03-09T12:23:17.423666",
+      "gameId": "DUB_vs_ULK_57"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "HTA",
+      "gameDate": "2026-03-10T12:23:17.423666",
+      "gameId": "DUB_vs_HTA_58"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "BAS",
+      "gameDate": "2026-03-11T12:23:17.423666",
+      "gameId": "DUB_vs_BAS_59"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "ASV",
+      "gameDate": "2026-02-10T12:23:17.423666",
+      "gameId": "DUB_vs_ASV_60"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "TEL",
+      "gameDate": "2026-02-11T12:23:17.423666",
+      "gameId": "DUB_vs_TEL_61"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "OLY",
+      "gameDate": "2026-02-12T12:23:17.423666",
+      "gameId": "DUB_vs_OLY_62"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "PAN",
+      "gameDate": "2026-02-13T12:23:17.423666",
+      "gameId": "DUB_vs_PAN_63"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-02-14T12:23:17.423666",
+      "gameId": "DUB_vs_PRS_64"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-02-15T12:23:17.423666",
+      "gameId": "DUB_vs_PAR_65"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-02-16T12:23:17.423666",
+      "gameId": "DUB_vs_MAD_66"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-02-17T12:23:17.423666",
+      "gameId": "DUB_vs_PAM_67"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-02-18T12:23:17.423666",
+      "gameId": "DUB_vs_VIR_68"
+    },
+    {
+      "homeTeamId": "DUB",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-02-19T12:23:17.423666",
+      "gameId": "DUB_vs_ZAL_69"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "BAR",
+      "gameDate": "2026-02-20T12:23:17.423666",
+      "gameId": "MIL_vs_BAR_70"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "MUN",
+      "gameDate": "2026-02-21T12:23:17.423666",
+      "gameId": "MIL_vs_MUN_71"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "ULK",
+      "gameDate": "2026-02-22T12:23:17.423666",
+      "gameId": "MIL_vs_ULK_72"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "HTA",
+      "gameDate": "2026-02-23T12:23:17.423666",
+      "gameId": "MIL_vs_HTA_73"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "BAS",
+      "gameDate": "2026-02-24T12:23:17.423666",
+      "gameId": "MIL_vs_BAS_74"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "ASV",
+      "gameDate": "2026-02-25T12:23:17.423666",
+      "gameId": "MIL_vs_ASV_75"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "TEL",
+      "gameDate": "2026-02-26T12:23:17.423666",
+      "gameId": "MIL_vs_TEL_76"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "OLY",
+      "gameDate": "2026-02-27T12:23:17.423666",
+      "gameId": "MIL_vs_OLY_77"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "PAN",
+      "gameDate": "2026-02-28T12:23:17.423666",
+      "gameId": "MIL_vs_PAN_78"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-03-01T12:23:17.423666",
+      "gameId": "MIL_vs_PRS_79"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-03-02T12:23:17.423666",
+      "gameId": "MIL_vs_PAR_80"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-03-03T12:23:17.423666",
+      "gameId": "MIL_vs_MAD_81"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-03-04T12:23:17.423666",
+      "gameId": "MIL_vs_PAM_82"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-03-05T12:23:17.423666",
+      "gameId": "MIL_vs_VIR_83"
+    },
+    {
+      "homeTeamId": "MIL",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-03-06T12:23:17.423666",
+      "gameId": "MIL_vs_ZAL_84"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "MUN",
+      "gameDate": "2026-03-07T12:23:17.423666",
+      "gameId": "BAR_vs_MUN_85"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "ULK",
+      "gameDate": "2026-03-08T12:23:17.423666",
+      "gameId": "BAR_vs_ULK_86"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "HTA",
+      "gameDate": "2026-03-09T12:23:17.423666",
+      "gameId": "BAR_vs_HTA_87"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "BAS",
+      "gameDate": "2026-03-10T12:23:17.423666",
+      "gameId": "BAR_vs_BAS_88"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "ASV",
+      "gameDate": "2026-03-11T12:23:17.423666",
+      "gameId": "BAR_vs_ASV_89"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "TEL",
+      "gameDate": "2026-02-10T12:23:17.423666",
+      "gameId": "BAR_vs_TEL_90"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "OLY",
+      "gameDate": "2026-02-11T12:23:17.423666",
+      "gameId": "BAR_vs_OLY_91"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "PAN",
+      "gameDate": "2026-02-12T12:23:17.423666",
+      "gameId": "BAR_vs_PAN_92"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-02-13T12:23:17.423666",
+      "gameId": "BAR_vs_PRS_93"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-02-14T12:23:17.423666",
+      "gameId": "BAR_vs_PAR_94"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-02-15T12:23:17.423666",
+      "gameId": "BAR_vs_MAD_95"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-02-16T12:23:17.423666",
+      "gameId": "BAR_vs_PAM_96"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-02-17T12:23:17.423666",
+      "gameId": "BAR_vs_VIR_97"
+    },
+    {
+      "homeTeamId": "BAR",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-02-18T12:23:17.423666",
+      "gameId": "BAR_vs_ZAL_98"
+    },
+    {
+      "homeTeamId": "MUN",
+      "awayTeamId": "ULK",
+      "gameDate": "2026-02-19T12:23:17.423666",
+      "gameId": "MUN_vs_ULK_99"
+    },
+    {
+      "homeTeamId": "MUN",
+      "awayTeamId": "HTA",
+      "gameDate": "2026-02-20T12:23:17.423666",
+      "gameId": "MUN_vs_HTA_100"
+    },
+    {
+      "homeTeamId": "MUN",
+      "awayTeamId": "BAS",
+      "gameDate": "2026-02-21T12:23:17.423666",
+      "gameId": "MUN_vs_BAS_101"
+    },
+    {
+      "homeTeamId": "MUN",
+      "awayTeamId": "ASV",
+      "gameDate": "2026-02-22T12:23:17.423666",
+      "gameId": "MUN_vs_ASV_102"
+    },
+    {
+      "homeTeamId": "MUN",
+      "awayTeamId": "TEL",
+      "gameDate": "2026-02-23T12:23:17.423666",
+      "gameId": "MUN_vs_TEL_103"
+    },
+    {
+      "homeTeamId": "MUN",
+      "awayTeamId": "OLY",
+      "gameDate": "2026-02-24T12:23:17.423666",
+      "gameId": "MUN_vs_OLY_104"
+    },
+    {
+      "homeTeamId": "MUN",
+      "awayTeamId": "PAN",
+      "gameDate": "2026-02-25T12:23:17.423666",
+      "gameId": "MUN_vs_PAN_105"
+    },
+    {
+      "homeTeamId": "MUN",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-02-26T12:23:17.423666",
+      "gameId": "MUN_vs_PRS_106"
+    },
+    {
+      "homeTeamId": "MUN",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-02-27T12:23:17.423666",
+      "gameId": "MUN_vs_PAR_107"
+    },
+    {
+      "homeTeamId": "MUN",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-02-28T12:23:17.423666",
+      "gameId": "MUN_vs_MAD_108"
+    },
+    {
+      "homeTeamId": "MUN",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-03-01T12:23:17.423666",
+      "gameId": "MUN_vs_PAM_109"
+    },
+    {
+      "homeTeamId": "MUN",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-03-02T12:23:17.423666",
+      "gameId": "MUN_vs_VIR_110"
+    },
+    {
+      "homeTeamId": "MUN",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-03-03T12:23:17.423666",
+      "gameId": "MUN_vs_ZAL_111"
+    },
+    {
+      "homeTeamId": "ULK",
+      "awayTeamId": "HTA",
+      "gameDate": "2026-03-04T12:23:17.423666",
+      "gameId": "ULK_vs_HTA_112"
+    },
+    {
+      "homeTeamId": "ULK",
+      "awayTeamId": "BAS",
+      "gameDate": "2026-03-05T12:23:17.423666",
+      "gameId": "ULK_vs_BAS_113"
+    },
+    {
+      "homeTeamId": "ULK",
+      "awayTeamId": "ASV",
+      "gameDate": "2026-03-06T12:23:17.423666",
+      "gameId": "ULK_vs_ASV_114"
+    },
+    {
+      "homeTeamId": "ULK",
+      "awayTeamId": "TEL",
+      "gameDate": "2026-03-07T12:23:17.423666",
+      "gameId": "ULK_vs_TEL_115"
+    },
+    {
+      "homeTeamId": "ULK",
+      "awayTeamId": "OLY",
+      "gameDate": "2026-03-08T12:23:17.423666",
+      "gameId": "ULK_vs_OLY_116"
+    },
+    {
+      "homeTeamId": "ULK",
+      "awayTeamId": "PAN",
+      "gameDate": "2026-03-09T12:23:17.423666",
+      "gameId": "ULK_vs_PAN_117"
+    },
+    {
+      "homeTeamId": "ULK",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-03-10T12:23:17.423666",
+      "gameId": "ULK_vs_PRS_118"
+    },
+    {
+      "homeTeamId": "ULK",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-03-11T12:23:17.423666",
+      "gameId": "ULK_vs_PAR_119"
+    },
+    {
+      "homeTeamId": "ULK",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-02-10T12:23:17.423666",
+      "gameId": "ULK_vs_MAD_120"
+    },
+    {
+      "homeTeamId": "ULK",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-02-11T12:23:17.423666",
+      "gameId": "ULK_vs_PAM_121"
+    },
+    {
+      "homeTeamId": "ULK",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-02-12T12:23:17.423666",
+      "gameId": "ULK_vs_VIR_122"
+    },
+    {
+      "homeTeamId": "ULK",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-02-13T12:23:17.423666",
+      "gameId": "ULK_vs_ZAL_123"
+    },
+    {
+      "homeTeamId": "HTA",
+      "awayTeamId": "BAS",
+      "gameDate": "2026-02-14T12:23:17.423666",
+      "gameId": "HTA_vs_BAS_124"
+    },
+    {
+      "homeTeamId": "HTA",
+      "awayTeamId": "ASV",
+      "gameDate": "2026-02-15T12:23:17.423666",
+      "gameId": "HTA_vs_ASV_125"
+    },
+    {
+      "homeTeamId": "HTA",
+      "awayTeamId": "TEL",
+      "gameDate": "2026-02-16T12:23:17.423666",
+      "gameId": "HTA_vs_TEL_126"
+    },
+    {
+      "homeTeamId": "HTA",
+      "awayTeamId": "OLY",
+      "gameDate": "2026-02-17T12:23:17.423666",
+      "gameId": "HTA_vs_OLY_127"
+    },
+    {
+      "homeTeamId": "HTA",
+      "awayTeamId": "PAN",
+      "gameDate": "2026-02-18T12:23:17.423666",
+      "gameId": "HTA_vs_PAN_128"
+    },
+    {
+      "homeTeamId": "HTA",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-02-19T12:23:17.423666",
+      "gameId": "HTA_vs_PRS_129"
+    },
+    {
+      "homeTeamId": "HTA",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-02-20T12:23:17.423666",
+      "gameId": "HTA_vs_PAR_130"
+    },
+    {
+      "homeTeamId": "HTA",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-02-21T12:23:17.423666",
+      "gameId": "HTA_vs_MAD_131"
+    },
+    {
+      "homeTeamId": "HTA",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-02-22T12:23:17.423666",
+      "gameId": "HTA_vs_PAM_132"
+    },
+    {
+      "homeTeamId": "HTA",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-02-23T12:23:17.423666",
+      "gameId": "HTA_vs_VIR_133"
+    },
+    {
+      "homeTeamId": "HTA",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-02-24T12:23:17.423666",
+      "gameId": "HTA_vs_ZAL_134"
+    },
+    {
+      "homeTeamId": "BAS",
+      "awayTeamId": "ASV",
+      "gameDate": "2026-02-25T12:23:17.423666",
+      "gameId": "BAS_vs_ASV_135"
+    },
+    {
+      "homeTeamId": "BAS",
+      "awayTeamId": "TEL",
+      "gameDate": "2026-02-26T12:23:17.423666",
+      "gameId": "BAS_vs_TEL_136"
+    },
+    {
+      "homeTeamId": "BAS",
+      "awayTeamId": "OLY",
+      "gameDate": "2026-02-27T12:23:17.423666",
+      "gameId": "BAS_vs_OLY_137"
+    },
+    {
+      "homeTeamId": "BAS",
+      "awayTeamId": "PAN",
+      "gameDate": "2026-02-28T12:23:17.423666",
+      "gameId": "BAS_vs_PAN_138"
+    },
+    {
+      "homeTeamId": "BAS",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-03-01T12:23:17.423666",
+      "gameId": "BAS_vs_PRS_139"
+    },
+    {
+      "homeTeamId": "BAS",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-03-02T12:23:17.423666",
+      "gameId": "BAS_vs_PAR_140"
+    },
+    {
+      "homeTeamId": "BAS",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-03-03T12:23:17.423666",
+      "gameId": "BAS_vs_MAD_141"
+    },
+    {
+      "homeTeamId": "BAS",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-03-04T12:23:17.423666",
+      "gameId": "BAS_vs_PAM_142"
+    },
+    {
+      "homeTeamId": "BAS",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-03-05T12:23:17.423666",
+      "gameId": "BAS_vs_VIR_143"
+    },
+    {
+      "homeTeamId": "BAS",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-03-06T12:23:17.423666",
+      "gameId": "BAS_vs_ZAL_144"
+    },
+    {
+      "homeTeamId": "ASV",
+      "awayTeamId": "TEL",
+      "gameDate": "2026-03-07T12:23:17.423666",
+      "gameId": "ASV_vs_TEL_145"
+    },
+    {
+      "homeTeamId": "ASV",
+      "awayTeamId": "OLY",
+      "gameDate": "2026-03-08T12:23:17.423666",
+      "gameId": "ASV_vs_OLY_146"
+    },
+    {
+      "homeTeamId": "ASV",
+      "awayTeamId": "PAN",
+      "gameDate": "2026-03-09T12:23:17.423666",
+      "gameId": "ASV_vs_PAN_147"
+    },
+    {
+      "homeTeamId": "ASV",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-03-10T12:23:17.423666",
+      "gameId": "ASV_vs_PRS_148"
+    },
+    {
+      "homeTeamId": "ASV",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-03-11T12:23:17.423666",
+      "gameId": "ASV_vs_PAR_149"
+    },
+    {
+      "homeTeamId": "ASV",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-02-10T12:23:17.423666",
+      "gameId": "ASV_vs_MAD_150"
+    },
+    {
+      "homeTeamId": "ASV",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-02-11T12:23:17.423666",
+      "gameId": "ASV_vs_PAM_151"
+    },
+    {
+      "homeTeamId": "ASV",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-02-12T12:23:17.423666",
+      "gameId": "ASV_vs_VIR_152"
+    },
+    {
+      "homeTeamId": "ASV",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-02-13T12:23:17.423666",
+      "gameId": "ASV_vs_ZAL_153"
+    },
+    {
+      "homeTeamId": "TEL",
+      "awayTeamId": "OLY",
+      "gameDate": "2026-02-14T12:23:17.423666",
+      "gameId": "TEL_vs_OLY_154"
+    },
+    {
+      "homeTeamId": "TEL",
+      "awayTeamId": "PAN",
+      "gameDate": "2026-02-15T12:23:17.423666",
+      "gameId": "TEL_vs_PAN_155"
+    },
+    {
+      "homeTeamId": "TEL",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-02-16T12:23:17.423666",
+      "gameId": "TEL_vs_PRS_156"
+    },
+    {
+      "homeTeamId": "TEL",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-02-17T12:23:17.423666",
+      "gameId": "TEL_vs_PAR_157"
+    },
+    {
+      "homeTeamId": "TEL",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-02-18T12:23:17.423666",
+      "gameId": "TEL_vs_MAD_158"
+    },
+    {
+      "homeTeamId": "TEL",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-02-19T12:23:17.423666",
+      "gameId": "TEL_vs_PAM_159"
+    },
+    {
+      "homeTeamId": "TEL",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-02-20T12:23:17.423666",
+      "gameId": "TEL_vs_VIR_160"
+    },
+    {
+      "homeTeamId": "TEL",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-02-21T12:23:17.423666",
+      "gameId": "TEL_vs_ZAL_161"
+    },
+    {
+      "homeTeamId": "OLY",
+      "awayTeamId": "PAN",
+      "gameDate": "2026-02-22T12:23:17.423666",
+      "gameId": "OLY_vs_PAN_162"
+    },
+    {
+      "homeTeamId": "OLY",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-02-23T12:23:17.423666",
+      "gameId": "OLY_vs_PRS_163"
+    },
+    {
+      "homeTeamId": "OLY",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-02-24T12:23:17.423666",
+      "gameId": "OLY_vs_PAR_164"
+    },
+    {
+      "homeTeamId": "OLY",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-02-25T12:23:17.423666",
+      "gameId": "OLY_vs_MAD_165"
+    },
+    {
+      "homeTeamId": "OLY",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-02-26T12:23:17.423666",
+      "gameId": "OLY_vs_PAM_166"
+    },
+    {
+      "homeTeamId": "OLY",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-02-27T12:23:17.423666",
+      "gameId": "OLY_vs_VIR_167"
+    },
+    {
+      "homeTeamId": "OLY",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-02-28T12:23:17.423666",
+      "gameId": "OLY_vs_ZAL_168"
+    },
+    {
+      "homeTeamId": "PAN",
+      "awayTeamId": "PRS",
+      "gameDate": "2026-03-01T12:23:17.423666",
+      "gameId": "PAN_vs_PRS_169"
+    },
+    {
+      "homeTeamId": "PAN",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-03-02T12:23:17.423666",
+      "gameId": "PAN_vs_PAR_170"
+    },
+    {
+      "homeTeamId": "PAN",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-03-03T12:23:17.423666",
+      "gameId": "PAN_vs_MAD_171"
+    },
+    {
+      "homeTeamId": "PAN",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-03-04T12:23:17.423666",
+      "gameId": "PAN_vs_PAM_172"
+    },
+    {
+      "homeTeamId": "PAN",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-03-05T12:23:17.423666",
+      "gameId": "PAN_vs_VIR_173"
+    },
+    {
+      "homeTeamId": "PAN",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-03-06T12:23:17.423666",
+      "gameId": "PAN_vs_ZAL_174"
+    },
+    {
+      "homeTeamId": "PRS",
+      "awayTeamId": "PAR",
+      "gameDate": "2026-03-07T12:23:17.423666",
+      "gameId": "PRS_vs_PAR_175"
+    },
+    {
+      "homeTeamId": "PRS",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-03-08T12:23:17.423666",
+      "gameId": "PRS_vs_MAD_176"
+    },
+    {
+      "homeTeamId": "PRS",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-03-09T12:23:17.423666",
+      "gameId": "PRS_vs_PAM_177"
+    },
+    {
+      "homeTeamId": "PRS",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-03-10T12:23:17.423666",
+      "gameId": "PRS_vs_VIR_178"
+    },
+    {
+      "homeTeamId": "PRS",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-03-11T12:23:17.423666",
+      "gameId": "PRS_vs_ZAL_179"
+    },
+    {
+      "homeTeamId": "PAR",
+      "awayTeamId": "MAD",
+      "gameDate": "2026-02-10T12:23:17.423666",
+      "gameId": "PAR_vs_MAD_180"
+    },
+    {
+      "homeTeamId": "PAR",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-02-11T12:23:17.423666",
+      "gameId": "PAR_vs_PAM_181"
+    },
+    {
+      "homeTeamId": "PAR",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-02-12T12:23:17.423666",
+      "gameId": "PAR_vs_VIR_182"
+    },
+    {
+      "homeTeamId": "PAR",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-02-13T12:23:17.423666",
+      "gameId": "PAR_vs_ZAL_183"
+    },
+    {
+      "homeTeamId": "MAD",
+      "awayTeamId": "PAM",
+      "gameDate": "2026-02-14T12:23:17.423666",
+      "gameId": "MAD_vs_PAM_184"
+    },
+    {
+      "homeTeamId": "MAD",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-02-15T12:23:17.423666",
+      "gameId": "MAD_vs_VIR_185"
+    },
+    {
+      "homeTeamId": "MAD",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-02-16T12:23:17.423666",
+      "gameId": "MAD_vs_ZAL_186"
+    },
+    {
+      "homeTeamId": "PAM",
+      "awayTeamId": "VIR",
+      "gameDate": "2026-02-17T12:23:17.423666",
+      "gameId": "PAM_vs_VIR_187"
+    },
+    {
+      "homeTeamId": "PAM",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-02-18T12:23:17.423666",
+      "gameId": "PAM_vs_ZAL_188"
+    },
+    {
+      "homeTeamId": "VIR",
+      "awayTeamId": "ZAL",
+      "gameDate": "2026-02-19T12:23:17.423666",
+      "gameId": "VIR_vs_ZAL_189"
+    }
+  ]
 }

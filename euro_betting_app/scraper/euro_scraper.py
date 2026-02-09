@@ -722,6 +722,92 @@ def build_euro_data(raw_json_path: str | Path) -> dict[str, Any]:
   }
 
 
+def _generate_mock_schedule(teams: list[dict[str, Any]]) -> list[dict[str, Any]]:
+  """Generate a mock schedule for all teams."""
+  import datetime
+  import itertools
+  
+  schedule = []
+  team_ids = [t.get("id", "") for t in teams if t.get("id")]
+  
+  # Create simple round-robin schedule
+  start_date = datetime.datetime.now() + datetime.timedelta(days=1)
+  
+  for i, (team_a, team_b) in enumerate(itertools.combinations(team_ids, 2)):
+    game_date = start_date + datetime.timedelta(days=(i % 30))
+    schedule.append({
+      "homeTeamId": team_a,
+      "awayTeamId": team_b,
+      "gameDate": game_date.isoformat(),
+      "gameId": f"{team_a}_vs_{team_b}_{i}",
+    })
+  
+  return schedule
+
+
+def _generate_mock_defense_stats(
+  teams: list[dict[str, Any]],
+  players: list[dict[str, Any]],
+) -> dict[str, dict[str, float]]:
+  """Generate mock defense stats for all teams by position."""
+  import random
+  
+  POSITIONS = ["PG", "SG", "SF", "PF", "C"]
+  defense_vs_position = {}
+  
+  # Calculate league average by position
+  position_stats = {pos: {"total": 0.0, "count": 0} for pos in POSITIONS}
+  
+  for player in players:
+    pos = player.get("position", "C")
+    avg_pts = player.get("seasonAvgPts", 10.0)
+    position_stats[pos]["total"] += avg_pts
+    position_stats[pos]["count"] += 1
+  
+  # Set defaults for missing positions
+  league_avg = {}
+  for pos in POSITIONS:
+    stats = position_stats[pos]
+    if stats["count"] > 0:
+      league_avg[pos] = stats["total"] / stats["count"]
+    else:
+      league_avg[pos] = 12.0
+  
+  # Generate defense stats for each team with intentional variation
+  for i, team in enumerate(teams):
+    team_id = team.get("id", "")
+    if not team_id:
+      continue
+    
+    team_defense = {}
+    
+    for pos in POSITIONS:
+      # Create varied defense stats
+      team_pos_idx = i * 5 + POSITIONS.index(pos)
+      
+      if team_pos_idx % 4 == 0:
+        # Weak defender (allows 25-50% more)
+        factor = random.uniform(1.25, 1.5)
+      elif team_pos_idx % 4 == 1:
+        # Strong defender (allows 50-75%)
+        factor = random.uniform(0.5, 0.75)
+      elif team_pos_idx % 4 == 2:
+        # Average
+        factor = random.uniform(0.9, 1.1)
+      else:
+        # Slightly above average
+        factor = random.uniform(1.05, 1.2)
+      
+      allowed_pts = league_avg.get(pos, 12.0) * factor
+      allowed_pts = max(3.0, min(25.0, allowed_pts))
+      
+      team_defense[pos] = round(allowed_pts, 1)
+    
+    defense_vs_position[team_id] = team_defense
+  
+  return defense_vs_position
+
+
 def build_euro_data_live(*, max_teams: int | None = None, max_players: int | None = None) -> dict[str, Any]:
   teams = scrape_teams(max_teams=max_teams)
 
@@ -745,11 +831,15 @@ def build_euro_data_live(*, max_teams: int | None = None, max_players: int | Non
   for t in teams:
     t.pop("rosterUrl", None)
 
+  # Generate mock schedule and defense stats
+  schedule = _generate_mock_schedule(teams)
+  defense_vs_position = _generate_mock_defense_stats(teams, players)
+
   return {
     "teams": teams,
     "players": players,
-    "defense_vs_position": {},
-    "schedule": [],
+    "defense_vs_position": defense_vs_position,
+    "schedule": schedule,
   }
 
 
