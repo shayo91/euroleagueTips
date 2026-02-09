@@ -52,17 +52,37 @@ def generate_defense_stats(teams, players):
             # Use default league average for positions with no players in data
             league_avg[pos] = 12.0
     
-    # Generate defense stats for each team
-    for team in teams:
+    print(f"League averages: {league_avg}")
+    
+    # Generate defense stats for each team with intentional variation
+    for i, team in enumerate(teams):
         team_id = team['id']
         team_defense = {}
         
         for pos in positions:
-            # Vary between 75% and 125% of league average
-            factor = random.uniform(0.75, 1.25)
+            # Create more varied defense stats:
+            # - Every position has at least some weak defenders (allowing 25%+ more)
+            # - Some teams are strong defenders on specific positions
+            
+            # Determine if this team should be weak or strong on this position
+            team_pos_idx = i * 5 + positions.index(pos)
+            
+            if team_pos_idx % 4 == 0:
+                # Weak defender on this position (allows 25-50% more)
+                factor = random.uniform(1.25, 1.5)
+            elif team_pos_idx % 4 == 1:
+                # Strong defender on this position (allows 50-75% of average)
+                factor = random.uniform(0.5, 0.75)
+            elif team_pos_idx % 4 == 2:
+                # Average defender on this position
+                factor = random.uniform(0.9, 1.1)
+            else:
+                # Slightly above average
+                factor = random.uniform(1.05, 1.2)
+            
             allowed_pts = league_avg.get(pos, 12.0) * factor
-            # Ensure minimum of 5 points
-            allowed_pts = max(5.0, allowed_pts)
+            # Ensure minimum of 3 points, maximum of 25
+            allowed_pts = max(3.0, min(25.0, allowed_pts))
             
             team_defense[pos] = round(allowed_pts, 1)
         
