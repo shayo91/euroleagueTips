@@ -82,6 +82,9 @@ class DataService {
         .whereType<Map<String, dynamic>>()
         .toList(growable: false);
 
+    print('DataService._parseEuroData():');
+    print('  Schedule games: ${schedule.length}');
+
     final opponentByTeamId = <String, String>{};
     for (final game in schedule) {
       final homeTeamId = game['homeTeamId'] as String?;
@@ -91,6 +94,12 @@ class DataService {
         opponentByTeamId[homeTeamId] ??= awayTeamId;
         opponentByTeamId[awayTeamId] ??= homeTeamId;
       }
+    }
+
+    print('  Teams with opponents in schedule: ${opponentByTeamId.length}');
+    if (opponentByTeamId.isNotEmpty) {
+      final sample = opponentByTeamId.entries.first;
+      print('  Sample: ${sample.key} vs ${sample.value}');
     }
 
     final teams = teamsJson.whereType<Map<String, dynamic>>().map((json) {
