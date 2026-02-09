@@ -50,8 +50,16 @@ class TipsController extends ChangeNotifier {
       final players = data.players;
       final defenses = data.defenses;
       final schedule = data.schedule;
+      
+      // Debug logging
+      print('TipsController.load():');
+      print('  Teams: ${teams.length}');
+      print('  Players: ${players.length}');
+      print('  Defenses: ${defenses.length}');
+      print('  Schedule: ${schedule.length}');
 
       final tips = AnalysisEngine.generateTips(players, teams, defenses, schedule);
+      print('  Generated tips: ${tips.length}');
       final teamsById = {for (final t in teams) t.id: t};
       final playersById = {for (final p in players) p.id: p};
       final defensesByTeamId = {for (final d in defenses) d.teamId: d};

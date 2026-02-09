@@ -20,12 +20,20 @@ class AnalysisEngine {
     final defensesByTeamId = {for (final d in defenses) d.teamId: d};
 
     final tips = <BettingTip>[];
+    
+    var playersProcessed = 0;
+    var playersWithTeam = 0;
+    var playersWithOpponent = 0;
+    var playersWithDefense = 0;
+    var playersPassGreenLight = 0;
 
     for (final player in players) {
+      playersProcessed++;
       final team = teamsById[player.teamId];
       if (team == null) {
         continue;
       }
+      playersWithTeam++;
 
       final opponentId = _findOpponentId(
             teamId: team.id,
@@ -37,11 +45,13 @@ class AnalysisEngine {
       if (opponent == null) {
         continue;
       }
+      playersWithOpponent++;
 
       final opponentDefense = defensesByTeamId[opponent.id];
       if (opponentDefense == null) {
         continue;
       }
+      playersWithDefense++;
 
       final leagueAverage = _leagueAveragePtsForPosition(player.position);
       final allowedPts = _allowedPtsForPosition(
@@ -71,6 +81,7 @@ class AnalysisEngine {
       if (!isGreenLight) {
         continue;
       }
+      playersPassGreenLight++;
 
       final defensiveHole = (allowedPts / leagueAverage) - 1.0;
       var confidenceScore =
@@ -93,6 +104,14 @@ class AnalysisEngine {
         ),
       );
     }
+    
+    print('AnalysisEngine.generateTips() stats:');
+    print('  Players processed: $playersProcessed');
+    print('  Players with team: $playersWithTeam');
+    print('  Players with opponent: $playersWithOpponent');
+    print('  Players with defense: $playersWithDefense');
+    print('  Players pass green light: $playersPassGreenLight');
+    print('  Tips generated: ${tips.length}');
 
     tips.sort((a, b) => b.confidenceScore.compareTo(a.confidenceScore));
     return tips;
