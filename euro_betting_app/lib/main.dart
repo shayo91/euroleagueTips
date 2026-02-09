@@ -24,8 +24,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    const dataUrl =
+    // Add cache-busting timestamp to ensure fresh data
+    final timestamp = DateTime.now().millisecondsSinceEpoch ~/ 60000; // Cache for 1 minute
+    const baseUrl =
         'https://raw.githubusercontent.com/shayo91/euroleagueTips/main/euro_betting_app/resources/data.json';
+    final dataUrl = '$baseUrl?v=$timestamp';
 
     return MultiProvider(
       providers: [
