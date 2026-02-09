@@ -30,6 +30,11 @@ class DataService {
 
   static const _cacheKey = 'euro_data_cache_v1';
 
+  Future<void> clearCache() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove(_cacheKey);
+  }
+
   Future<EuroData> fetchData() async {
     try {
       final response = await http.get(Uri.parse(dataUrl));
